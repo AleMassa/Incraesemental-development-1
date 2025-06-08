@@ -2,9 +2,6 @@
 
 A desktop application for the preliminary structural design and visualization of reinforced concrete beams, tailored for educational and demonstration purposes in civil and structural engineering.
 
-![Cross Section View](https://i.imgur.com/G4P9a5a.png)
-![Longitudinal View](https://i.imgur.com/bK6g3Hw.png)
-
 ## Overview
 
 The Concrete Rebar Simulator is a C++ application that allows users to input the geometric and loading parameters for a simply-supported concrete beam and receive a complete preliminary design. The application calculates the required flexural (bending) and shear reinforcement, provides a cost estimate, and generates clear cross-sectional and longitudinal diagrams of the resulting rebar layout.
