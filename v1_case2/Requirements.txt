@@ -1,0 +1,49 @@
+===================================================================
+== Project Requirements for Concrete Rebar Simulator ==
+===================================================================
+This document lists the necessary dependencies, libraries, and tools
+required to compile and run this C++ application.
+--- Build Environment ---
+1. C++ Compiler
+A modern C++ compiler supporting at least the C++11 standard is required.
+Recommended options:
+- MSVC (v142 or newer) on Windows (via Visual Studio 2019/2022)
+- GCC (g++) version 7.0 or newer on Linux
+- Clang version 5.0 or newer on macOS/Linux
+2. Build System
+The project is set up to be built using qmake, which is the standard
+build system provided by the Qt Framework. Alternatively, CMake (version 3.10+)
+could be configured to build the project.
+--- Library Dependencies ---
+1. Qt Framework
+Used for the Graphical User Interface (GUI).
+- Library: Qt
+- Version: 5.15.2 or newer (Qt6 should also be compatible)
+- Modules:
+- QtWidgets (for all UI elements like windows, buttons, views)
+- QtGui (for core GUI functionalities, images, and graphics scenes)
+- QtCore (for core non-GUI functionalities like signals and slots)
+- Website: https://www.qt.io/
+2. OpenCV (Open Source Computer Vision Library)
+Used for all drawing and image generation tasks.
+- Library: OpenCV
+- Version: 4.5.0 or newer
+- Modules:
+- imgproc (for drawing shapes, lines, and text)
+- highgui (for image display and handling)
+- core (for core data structures like cv::Mat)
+- Website: https://opencv.org/
+--- Setup Instructions ---
+1. Install the Qt Framework (Open Source version) from the official Qt website.
+During installation, make sure to select your compiler (e.g., MSVC or MinGW)
+and the required Qt modules.
+2. Install OpenCV. You can either download the pre-built libraries for your
+platform or build it from the source.
+3. Configure your project's build file (the .pro file for qmake) to link
+against the installed Qt and OpenCV libraries by specifying the correct
+INCLUDEPATH and LIBS variables.
+Example .pro file configuration snippet:
+INCLUDEPATH += /path/to/opencv/build/include
+LIBS += -L/path/to/opencv/build/x64/vc15/lib -lopencv_world450
+(Note: The exact library name, e.g., 'opencv_world450', may vary based
+on your OpenCV version and build configuration).
